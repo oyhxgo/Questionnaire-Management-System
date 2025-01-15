@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.5">
+    <title>欢迎来到广师大之星</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="PromptBox"></div>
+    <!-- 导航栏 -->
+    <header id="title">
+        <!-- 图标和文字 -->
+        <div id="title-1">
+            <img src="img/logo.png" alt="图标" id="icon-1" title="本系统由广师大四位码农独家创建而成的问卷管理系统">
+            <button id="home" title="问卷管理系统提示：看我,再看我,再看我就给你刷新掉">广师大之星
+            </button>
+            <div class="pp" onclick="toggleDropdown()">
+                <!--  profile picture头像 -->
+                <img src="img/pp.jpg" alt="头像" title="i like dogs" class="ppimg" />
+                <div class="ppcontent" id="ppContent">
+                    <a href="#" onclick="resetPage()" title="点击此按钮清空本地存储，可以恢复一些bug情况">重置页面</a>
+                    <a href="#" onclick="logout()" title="退出登录，前往第一个界面重新登陆">退出登录</a>
+                </div>
+            </div>
+        </div>
+        <button id="navbtn1">
+            <!-- navbtn1导航栏第一个按钮 -->
+            <p title="点我带你回家">我的问卷</p>
+        </button>
+      
+    </header>
+
+    <!-- //第一个页面 -->
+    <section id="bodyarea">
+        <div id="testarea">
+            <div id="btn-new">
+                <p title="点俺给你新建一个问卷">+ 新建问卷</p>
+            </div>
+        </div>
+    </section>
+    <!-- //第二个页面（本地的问卷） -->
+    <div id="localquest" >
+        <div class="table">
+            <div class="hd1">问卷标题</div>
+            <div class="hd2">创建日期</div>
+            <div class="hd3">发布日期</div>
+            <div class="hd4">截止日期</div>
+            <div class="hd5">问卷状态</div>
+            <div class="hd6">操作区域</div>
+            <div class="hd7" id="newbtn">
+                <button>+ 新建问卷</button>
+            </div>
+              <!-- 主盒子 -->
+        </div>
+        <div id="main">
+           
+        </div>
+        <div class="foot">
+            <input type="checkbox">
+            <div>全选</div>
+            <button>删除问卷</button>
+        </div>
+    </div>
+    <script src="js/index.js" defer></script>
+</body>
+
+</html>

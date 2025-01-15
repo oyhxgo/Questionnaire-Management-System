@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="CN-zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>准备发布问卷</title>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/release.css">
+</head>
+
+<body>
+  <header id="title">
+    <!-- 图标和文字 -->
+    <div id="title-1">
+      <img src="img/logo.png" alt="图标" id="icon-1" title="本系统由广师大四位码农独家创建而成的问卷管理系统">
+      <button id="home" title="问卷管理系统提示：看我,再看我,再看我就给你刷新掉">广师大之星
+      </button>
+      <div class="pp" onclick="toggleDropdown()">
+        <!--  profile picture头像 -->
+        <img src="img/pp.jpg" alt="头像" title="i like dogs" class="ppimg" />
+        <div class="ppcontent" id="ppContent">
+          <a href="#" onclick="resetPage()" title="点击此按钮清空本地存储，可以恢复一些bug情况">重置页面</a>
+          <a href="#" onclick="logout()" title="退出登录，前往第一个界面重新登陆">退出登录</a>
+        </div>
+      </div>
+    </div>
+    <button id="navbtn1">
+      <!-- navbtn1导航栏第一个按钮 -->
+      <p title="点我带你回家">我的问卷</p>
+    </button>
+
+  </header>
+  <div class="view">
+    <button id="outbtn2">到首页</button>
+    <div id="Title"></div>
+    <hr class="border">
+    <div id="localStorageContent"></div>
+    <hr class="border">
+    <div class="font1">
+      <div class="DDL">
+        <p>问卷截止日期:</p><input type="date" id="dateinput" required>
+      </div>
+      <div class="font2" id="release">
+        <div class="release">
+          发布问卷
+        </div>
+      </div>
+      <div class="modal" id="myModal">
+        <div class="modal-content">
+          <div id="closeModal">
+            <span id="closespan">&times; 关闭</span>
+          </div>
+          <h2>所选日期早于今天
+            <hr> 请选择一个有效的日期!
+          </h2>
+          <p>请重新设置</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/release.js" defer></script>
+</body>
+
+</html>

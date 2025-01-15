@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="CN-zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>问卷星登录界面</title>
+  <link rel="stylesheet" href="login/css/登录界面.css">
+
+</head>
+<!-- 目前写一个比较简单的登录界面，没有忘记密码，没有更改密码，只有当初登录和注册 -->
+
+<body>
+  <span class="pagebox">
+    <form action="">
+      <h2>登录页面</h2>
+      <br>
+      <hr>
+      <p style="text-align: center;">账号:admin 密码:123456</p>
+      <p style="text-align: center;">您可以直接使用这个账号密码登录</p>
+      <div class="inputbox">
+        <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+        <input type="text" required id="username">
+        <label>账号或邮箱</label>
+      </div>
+      <div class="inputbox">
+        <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+        <input type="password" required id="password">
+        <label >密码</label>
+      </div>
+      <div class="rem">
+        <label>
+            <input type="checkbox"> 下次记住密码
+        </label>
+    </div>
+    <button type="submit" id="login">点击登录</button>
+    <div class="reg">
+        <p>初次访问？<a href="login/注册页面.html">来点击注册吧</a></p>
+    </div>
+    </form>
+    <!-- 引入图片库 -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </div>
+    <script src="login/js/登录界面.js"></script>
+</body>
+
+</html>

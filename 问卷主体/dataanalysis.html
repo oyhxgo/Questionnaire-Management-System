@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大学生网络游戏成瘾问题调查</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.3.2/dist/echarts.min.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/dataanalysis.css">
+   
+</head>
+<body>
+  <header id="title">
+    <!-- 图标和文字 -->
+    <div id="title-1">
+        <img src="img/logo2.png" alt="图标" id="icon-1" title="本系统由广师大四位码农独家创建而成的问卷管理系统">
+        <button id="home" title="问卷管理系统提示：看我,再看我,再看我就给你刷新掉">广师大之星
+        </button>
+        <div class="pp" onclick="toggleDropdown()">
+            <!--  profile picture头像 -->
+            <img src="img/pp.jpg" alt="头像" title="i like dogs" class="ppimg" />
+            <div class="ppcontent" id="ppContent">
+                <a href="#" onclick="resetPage()" title="点击此按钮清空本地存储，可以恢复一些bug情况">重置页面</a>
+                <a href="#" onclick="logout()" title="退出登录，前往第一个界面重新登陆">退出登录</a>
+            </div>
+        </div>
+    </div>
+    <button id="navbtn1">
+        <!-- navbtn1导航栏第一个按钮 -->
+        <p title="点我带你回家">我的问卷</p>
+    </button>
+  
+</header>
+    <div class="container">
+        <h1>大学生网络游戏成瘾问题调查</h1>
+        
+        <!-- 性别分布 -->
+        <div class="section">
+            <div class="title">
+                <h2 class="question">1. 您的性别?</h2>
+                <ul class="options">
+                    <li>A. 男</li>
+                    <li>B. 女</li>
+                </ul>
+            </div>
+            <div class="chart" id="genderChart"></div>
+        </div>
+        
+        <!-- 游戏频率 -->
+        <div class="section">
+            <div class="title">
+                <h2 class="question">2. 你经常玩网络游戏吗?</h2>
+                <ul class="options">
+                    <li>A. 几乎每天都玩</li>
+                    <li>B. 一个星期玩一两次</li>
+                    <li>C. 一年也玩不到几次</li>
+                    <li>D. 从来不玩</li>
+                </ul>
+            </div>
+            <div class="chart" id="gameFrequencyChart"></div>
+        </div>
+        
+        <!-- 上瘾原因 -->
+        <div class="section">
+            <div class="title">
+                <h2 class="question">3. 你认为以下哪些是导致网游上瘾的主要原因呢?</h2>
+                <ul class="options">
+                    <li>A. 网游本身太好玩了</li>
+                    <li>B. 校园生活过于枯燥</li>
+                    <li>C. 逃避现实的问题，比如自身的不足，家庭问题等</li>
+                    <li>D. 大学生自身目标的缺失，意志的薄弱</li>
+                    <li>E. 老师和同学们疏于关心</li>
+                </ul>
+            </div>
+            <div class="chart" id="addictionReasonsChart"></div>
+        </div>
+    </div>
+
+    <script src="js/dataanalysis.js">   
+    </script>
+
+</body>
+</html>

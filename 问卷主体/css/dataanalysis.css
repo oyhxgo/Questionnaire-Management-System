@@ -1,0 +1,143 @@
+#title {
+  background-color: rgb(68, 71, 90);
+  /* 界面颜色背景 */
+  display: flex;
+  /* 使用flexbox布局 */
+  justify-content: flex-start;
+  /* 左对齐 */
+  align-items: center;
+  /* 垂直居中 */
+  padding: 10px;
+  /* 内边距 */
+}
+
+#home{
+  background-color: rgb(68, 71, 90);
+  border: none;
+  color: var(--fontcolor);
+  font-weight: bold; 
+  font-size: large; 
+  margin-left: 8px; 
+  letter-spacing: 5px;
+  cursor: pointer;
+}
+#home:hover{
+  color:rgb(88, 255, 135);
+}
+#navbtn1 {
+  /* "我的问卷"按钮的样式 */
+  padding: 6px;
+  background-color: rgb(255, 246, 189,0);
+  /* 去除边框 */
+  border:none;
+  color: var(--fontcolor); 
+  font-size: 18px; 
+  font-weight: bold;
+}
+
+/* 按钮的激活状态样式 */
+#navbtn1.active {
+  color:rgb(88, 255, 135);
+}
+#navbtn1::after {
+  content: "";
+  display: none;
+  position: absolute;
+  bottom: 5;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: rgb(88, 255, 135);
+}
+#navbtn1:hover::after {
+  display: block;
+}
+
+
+/* 鼠标悬停时的特效 */
+#navbtn1:hover {
+  color:rgb(88, 255, 135);
+  /* 按钮触碰效果 */
+  animation: touch 0.1s linear forwards;
+  cursor: pointer;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #282a36;
+  /* 暗色背景 */
+  color: #f8f8f2;
+  /* 亮色文字 */
+  transition: background-color 0.5s ease;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.section {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 60px;
+  /* 增加间隔 */
+  align-items: center;
+  background-color: #44475a;
+  /* 卡片背景 */
+  padding: 20px;
+  border-radius: 8px;
+  /* 圆角 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* 阴影 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section:hover {
+  transform: translateY(-5px);
+  /* 鼠标悬停时上浮 */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  /* 鼠标悬停时阴影加深 */
+}
+
+.title {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.chart {
+  flex: 2;
+  height: 400px;
+}
+
+h1,
+h2 {
+  color: #50fa7b;
+  /* 绿色高亮标题 */
+}
+
+.question {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  /* 增加空行 */
+}
+
+.options {
+  list-style: none;
+  padding: 0;
+}
+
+.options li {
+  margin-bottom: 5px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.options li:hover {
+  color: #bd93f9;
+  /* 鼠标悬停时颜色变化 */
+}

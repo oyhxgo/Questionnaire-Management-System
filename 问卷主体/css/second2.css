@@ -1,0 +1,454 @@
+:root{
+    --color:rgb(0, 168, 235);
+}
+/* 测试区域的样式 */
+#testarea2 {
+    background-color: rgb(177, 173, 173);
+    /* 测试区域背景为白色 */
+    width: 1000px;
+    border: 3px dashed var(--larborder);
+    border-radius: 10px;
+    /* 固定宽度 */
+    min-height: 200px;
+    /* 最小高度 */
+    margin: auto;
+    /* 居中 */
+    display: flex;
+    /* 使用flexbox布局 */
+    justify-content: center;
+    /* 水平居中 */
+    align-items: center;
+    /* 垂直居中 */
+    flex-direction: column;
+    /* 垂直堆叠 */
+    box-shadow: 2px 2px 3px var(--larborder);
+    /* 阴影效果 */
+
+  
+}
+/* 整个测试框 */
+#test {
+    width: 95%;
+    /* 宽度为95% */
+    margin-top: 5px;
+    /* 上方间距 */
+    display: flex;
+    /* 默认隐藏 */
+    justify-content: center;
+    /* 水平居中 */
+    align-items: center;
+    /* 垂直居中 */
+    padding-bottom: 50px;
+
+}
+/* 测试标题的样式 */
+#test-title {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    width: 95%;
+    /* 宽度为95% */
+    color: black;
+    /* 文字颜色 */
+    letter-spacing: 2px;
+    /* 字母间距 */
+    box-shadow: 1px 1px 1px white;
+    /* 阴影效果 */
+    display: flex;
+    /* 默认隐藏 */
+    padding: 10px;
+    /* 内边距 */
+    /* 上方间距 */
+    border-bottom: 2px solid gray;
+    /* 下边框 */
+    flex-direction: column;
+    /* 垂直堆叠 */
+    background-color: white;
+    /* 背景色为蓝色 */
+    user-select: none;
+    /* 禁止文本选择 */
+    padding-left: 10px;
+    padding-right: 60px;
+}
+
+#test-title input {
+    width: 100%;
+    border: none;
+    /* 去掉边框 */
+    outline: none;
+    /* 去掉聚焦时的外轮廓 */
+    font-size: 20px;
+    /* 输入框字体大小 */
+    text-align: center;
+    /* 文本居中 */
+    background-color: transparent;
+    /* 背景透明 */
+}
+#borderbottom{
+    width: 100%;
+    border-bottom: 2px solid gray;
+    margin-top: 30px;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+#add-question-button{
+    width: 100%;
+    min-height: auto;
+    border: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+#show-btn{
+    padding-top: 20px;
+    padding-bottom: 35px;
+    top: 10px;
+    display: none;
+    position: relative;
+    height: 50%;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-grow: 1;
+    margin: 10px 0;
+}
+#hide{
+    cursor: pointer;
+    color: rgb(79, 76, 76);
+    user-select: none;
+    position: absolute;
+    /* 放在右上角 占一行*/
+    top:-38px;
+    right: 15px;
+}
+#hide:hover{
+    color: rgb(32, 159, 240);
+}
+#add {
+    text-align: center;
+    /* 文本居中 */
+    font-weight: bold;
+    /* 加粗文本 */
+    font-size: large;
+    /* 大字体 */
+    letter-spacing: 3px;
+    /* 字母间距 */
+    background-image: linear-gradient(to right, rgb(255, 233, 252), rgb(231, 254, 248));
+    /* background-image: linear-gradient(to right, rgb(253, 219, 147), rgb(205, 251, 251)); */
+    /* 背景颜色为灰色 */
+    width: 100%;
+    /* 宽度为95% */
+    height: auto;
+    /* 固定高度 */
+    line-height: 50px;
+    /* 垂直居中 */
+    margin: auto;
+    /* 居中 */
+    /* margin-bottom: 10px; */
+    /* 下方间距 */
+    transition: transform 0.2s ease-out, margin 0.2s ease-out;
+    /* 平滑过渡 */
+    /* 下边框 */
+    cursor: default;
+    /* 默认光标 */
+    user-select: none;
+    /* 禁止文本选择 */
+    border-radius: 4px;
+    /* 圆角 */
+}
+
+#add:hover {
+    /* animation: touchadd 0.6s linear forwards; */
+    cursor: pointer;
+    box-shadow: 0px 0px 4px 5px rgb(201, 200, 200);
+}
+
+#add.active {
+    background-color: rgb(185, 184, 184);
+    /* 点击时背景颜色 */
+    transform: scale(1.05) ease;
+    /* 点击时缩小 */
+    transition: background-color 0.1s ease, transform 0.1s ease;
+    /* 平滑过渡 */
+}
+
+/* 添加问题按钮的动画效果 */
+#extra{
+    /* position: absolute;
+    bottom: 10%; */
+    margin-top: 30px;
+}
+#single,
+#many,
+#blank {
+    text-transform: uppercase;
+    height: 30px;
+    width: 100px;
+    border-radius: 6px;  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  
+    color: white;  
+    /* padding: 10px 20px;   */
+    border: none;  
+    cursor: pointer;  
+    user-select: none;
+    text-align: center;
+    justify-content: space-around;
+    flex-basis: 20%;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+#single{
+    background-image: linear-gradient(to right, white, rgb(233, 95, 84));
+    box-shadow: 0 4px 15px 0 rgba(233, 49, 116, 0.75);
+}
+#many{
+    background-image: linear-gradient(to right, rgb(254, 232, 48), rgb(220, 124, 22));
+    box-shadow: 0 4px 15px 0 rgba(210, 188, 114, 0.75);
+}
+#blank{
+    background-image: linear-gradient(to right, #25aae1, #40e495);
+    box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+}
+
+
+.question-item {  
+    padding: 8px;  
+    border: 1px solid #ccc;  
+    margin: 5px 0;  
+    background-color: #f9f9f9;  
+    border-radius: 4px;  
+    width: 95%;  
+}  
+#question-list {  
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}  
+
+.question-container {  
+    width: 100%;
+    height: auto;
+    margin-top: 10px;   
+    margin-bottom: 10px;  
+    user-select: none;
+}  
+/* 添加删除按钮的样式 */  
+.remove-button{  
+    
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    color: white;  
+    border: none;  
+    color: black;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.remove-button-1{  
+    /* width: 20px;
+    height: 20px; */
+    border-radius: 5px;
+    color: white;  
+    border: none;  
+    color: black;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.remove-button-1:hover{
+    background-color: rgb(255, 96, 96);
+    cursor: pointer;
+}
+
+.remove-button:hover{
+    background-color: rgb(255, 96, 96);
+    cursor: pointer;
+}
+
+.addButton{
+    background-color: #2ee2a6;
+    border-radius: 5px;
+    border: 1px solid gray;   
+}
+
+.addButton:hover{
+    cursor: pointer;
+    background-color: #27c691;
+}
+
+.addOptionButton-1{
+    border-radius: 5px;
+    color: white;  
+    border: none;  
+    color: black;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.addOptionButton-1:hover{
+    background-color: rgb(255, 96, 96);
+    cursor: pointer;
+}
+
+#outbtn {
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+    user-select: none;
+    color: rgb(66, 66, 66);
+    font-weight: bold;
+    background-color: rgb(51, 153, 248);
+    border-radius: 15px;
+    border: none;
+    letter-spacing: 2px;
+    transition: filter 0.3s ease; /* 添加过渡效果，让变化更平滑 */
+}
+#outbtn:hover{
+    filter: brightness(92%); /* 当鼠标悬停时，将亮度降低到原来的80%，你可以根据需要调整这个数值 */
+}
+#outbtn2 {
+    display: none;
+    position: absolute;
+    right: 360px;
+    top: 130px;
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+    user-select: none;
+    color: rgb(66, 66, 66);
+    font-weight: bold;
+    background-color: rgb(233, 252, 248);
+    border-radius: 15px;
+    border: none;
+    letter-spacing: 2px;
+    transition: filter 0.3s ease; /* 添加过渡效果，让变化更平滑 */
+}
+#outbtn2:hover{
+    filter: brightness(92%); /* 当鼠标悬停时，将亮度降低到原来的80%，你可以根据需要调整这个数值 */
+}
+.submitbtn11{
+    width: 100px;
+    height: 50px;
+    border: none;
+    letter-spacing: 2px;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 15px;
+    font-weight: bold;
+    color: rgb(124, 87, 20);
+    background-color: rgb(255, 219, 156);
+    transition: filter 0.3s ease; /* 添加过渡效果，让变化更平滑 */
+}
+.submitbtn11:hover{
+    filter: brightness(92%); /* 当鼠标悬停时，将亮度降低到原来的80%，你可以根据需要调整这个数值 */
+}
+
+.move-buttons{
+    border-radius: 5px;
+    color: white;  
+    border: none;  
+    color: rgb(130, 126, 126);
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-left: 10px;
+    margin-top: 5px;
+    /* margin-bottom: 5px; */
+}
+.move-buttons:hover{
+    background-color: rgb(242, 159, 159);
+    cursor: pointer;
+}
+
+#dateinput{
+    width: 100px;
+    height: 35px;
+    cursor: pointer;
+    color: black;
+    margin-top: 8px;
+    margin-left: 9px; 
+    margin-right: 350px;
+}
+@keyframes touchadd {
+    0% {
+        transform: scale(1) translateY(0);
+        /* 初始状态 */
+        margin-top: 0;
+        /* 初始间距 */
+    }
+    100% {
+        transform: scale(1.1) translateY(-5px);
+        /* 放大并向上移动 */
+        margin-top: 5px;
+        /* 增加间距 */
+    }
+}
+
+.singleoption{
+    margin-left: 40px;
+    height: auto;
+}
+.manyoption{
+    margin-left: 40px;
+    height: auto;
+}
+
+
+.modal {
+    display: none;
+    /* 默认为隐藏 */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* 背景遮罩 */
+    
+}
+#hide{
+    letter-spacing: 2px;
+    color: rgb(77, 77, 77);
+    font-weight: bold;
+    
+}
+.modal-content {
+    position: relative;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    width: 300px;
+    top: 50%;
+    border-radius: 25px;
+    transform: translateY(-50%);
+}
+
+#closeModal{
+    width: 60px;
+    height: 25px;
+    cursor: pointer;
+    border: 2px solid blue;
+    background-color: rgb(195, 197, 199);
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#closespan{
+    user-select: none;
+}
+
+
+
+
+
